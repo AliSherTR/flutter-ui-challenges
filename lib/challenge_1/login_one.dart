@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui_challange/challenge_1/sign_up_one.dart';
 import 'package:flutter_ui_challange/common/widgets/app_button.dart';
 import 'package:flutter_ui_challange/common/widgets/form_divider.dart';
 import 'package:flutter_ui_challange/common/widgets/social_auth_button.dart';
@@ -118,11 +119,26 @@ class LoginOne extends StatelessWidget {
                     style: Theme.of(context).textTheme.labelSmall,
                   ),
                   const SizedBox(width: 5),
-                  Text(
-                    "Sign Up",
-                    style: Theme.of(context).textTheme.labelMedium?.copyWith(
-                      color: Colors.blue[800],
-                      fontSize: 15,
+                  TextButton(
+                    style: TextButton.styleFrom(
+                      padding: const EdgeInsets.all(0),
+                      minimumSize: const Size(0, 0),
+                      tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                    ),
+                    onPressed: (){
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const SignUpOne(),
+                        ),
+                      );
+                    },
+                    child: Text(
+                      "Sign Up",
+                      style: Theme.of(context).textTheme.labelMedium?.copyWith(
+                        color: Colors.blue[800],
+                        fontSize: 15,
+                      ),
                     ),
                   ),
                 ],
